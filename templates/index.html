@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>Indian Celebrities</h1>
+    <br>
+    {% if data|length>0 %}
+    <table broder="1px" width="800">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Height</th>
+            <th>Zodiac</th>
+        </tr>
+        <tr></tr>
+        {% for actor in data %}
+        <tr>
+           <td style="text-align: center;"><img src={{actor.image}} width=100 height=100 style="vertical-align:middle"></td>
+           <td style="text-align: center;">{{actor.name}}</td>
+           <td style="text-align: center;">{{actor.age}}</td>
+           <td style="text-align: center;">{{actor.height}}</td>
+           <td style="text-align: center;">{{actor.zoidiac}}</td> 
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <form action="/" method="POST">
+        <input type="text" name="image" id="image" value="image url">
+        <input type="text" id="name" name="name" value="Name">
+        <input type="text" id="age" name="age" value="Age">
+        <input type="text" id="height" name="height" value="Height">
+        <input type="text" id="zodiac" name="zodiac" value="Zodiac">
+        <input type="submit" id="submit" value="Add data" >
+    </form>
+</center>
+</body>
+</html>
