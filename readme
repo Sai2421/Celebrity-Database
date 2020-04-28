@@ -1,0 +1,13 @@
+This task contains the database of Many famous Indian celebrities, data like Age, name ,Height ,Zodiac sign. 
+Database used is SQLite.
+Web application developed using Flask in backend.
+
+
+How to run--
+1. Download the repository 
+2. Use command "flask run"
+3. Go to the url directed ,eg-127.0.0.1:5000
+
+OR
+
+Web application hosted on AWS EC2, instance url -- http://ec2-18-220-238-68.us-east-2.compute.amazonaws.com/
